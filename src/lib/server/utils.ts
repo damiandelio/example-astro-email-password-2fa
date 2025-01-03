@@ -20,7 +20,7 @@ export function constantTimeEqualString(a: string, b: string): boolean {
 		return false;
 	}
 	const aBytes = new TextEncoder().encode(a);
-	const bBytes = new TextEncoder().encode(a);
+	const bBytes = new TextEncoder().encode(b);
 	const equal = constantTimeEqual(aBytes, bBytes);
 	return equal;
 }
